@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ESLintProjectComponent">
+    <option name="eslintRcFile" value="C:\Users\Tamara\IdeaProjects\Humiditree\humiditree\.eslintrc.js" />
+    <option name="eslintExecutable" value="C:\Users\Tamara\IdeaProjects\Humiditree\humiditree\node_modules\eslint\bin\eslint.js" />
+    <option name="nodeInterpreter" value="D:\Programme\nodejs\node_modules\npm\bin\npm" />
+    <option name="pluginEnabled" value="true" />
+    <option name="autoFix" value="true" />
+  </component>
+</project>

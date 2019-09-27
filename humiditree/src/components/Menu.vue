@@ -1,0 +1,42 @@
+<template>
+    <Slide>
+      <a id="home" href="#">
+        <span>Home</span>
+        <span>Home</span>
+        <span>Home</span>
+        <span>Home</span>
+      </a>
+    </Slide>
+</template>
+
+<script>
+    import {Slide} from 'vue-burger-menu'
+
+    export default {
+        name: 'menu',
+        components: {
+            Slide
+        }
+    }
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+  h1, h2 {
+    font-weight: normal;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  a {
+    color: #35495E;
+  }
+</style>
