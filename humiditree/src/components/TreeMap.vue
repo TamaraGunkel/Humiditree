@@ -1,7 +1,10 @@
 <template>
   <l-map id="treemap" :zoom="zoom" :options="{zoomControl: false}" :center="center">
-    <l-tile-layer :url="url" :attribution="attribution" />
+    <l-tile-layer :url="url" :attribution="attribution"/>
     <l-marker v-for="tree in trees" :lat-lng="getLatLng(tree.lat, tree.lon)">
+      <l-icon :icon-anchor="staticAnchor">
+        <img src="../assets/leaf-red.png" />
+      </l-icon>
       <l-popup>
         {{tree.species}}
         <p v-if="tree.dryness">
@@ -17,8 +20,9 @@
 </template>
 
 <script>
-    import { latLng } from "leaflet";
-    import {LMap, LMarker, LPopup, LTileLayer} from "vue2-leaflet";
+    import {latLng, icon} from "leaflet";
+    import {LMap, LMarker, LPopup, LTileLayer, LIcon} from "vue2-leaflet";
+
     const trees = require('../json/trees.json').trees;
 
     export default {
@@ -27,16 +31,18 @@
             LMap,
             LTileLayer,
             LMarker,
-            LPopup
+            LPopup,
+            LIcon
         },
         data() {
             return {
                 zoom: 18,
                 url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                attribution:  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
                 withPopup: latLng(51.950429, 7.638429),
                 center: latLng(51.950429, 7.638429),
-                trees: trees
+                trees: trees,
+                staticAnchor: [0, 0]
             }
         },
         methods: {
