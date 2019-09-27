@@ -1,27 +1,30 @@
 <template>
   <l-map id="treemap" :zoom="zoom" :options="{zoomControl: false}" :center="center">
     <l-tile-layer :url="url" :attribution="attribution"/>
-    <l-marker v-for="tree in trees" :lat-lng="getLatLng(tree.lat, tree.lon)">
-      <l-icon :icon-anchor="staticAnchor">
-        <img src="../assets/leaf-red.png" />
-      </l-icon>
-      <l-popup>
-        {{tree.species}}
-        <p v-if="tree.dryness">
-          Gieß mich!
-        </p>
-        <p v-else>
-          Hab keinen Durst.
-        </p>
+   <vue2-leaflet-marker-cluster>
+     <l-marker v-for="tree in trees" v-bind:key="tree.id" :lat-lng="getLatLng(tree.lat, tree.lon)">
+       <l-icon :icon-anchor="staticAnchor">
+         <img src="../assets/leaf-red.png"/>
+       </l-icon>
+       <l-popup>
+         {{tree.species}}
+         <p v-if="tree.dryness">
+           Gieß mich!
+         </p>
+         <p v-else>
+           Hab keinen Durst.
+         </p>
 
-      </l-popup>
-    </l-marker>
+       </l-popup>
+     </l-marker>
+   </vue2-leaflet-marker-cluster>
   </l-map>
 </template>
 
 <script>
     import {latLng, icon} from "leaflet";
     import {LMap, LMarker, LPopup, LTileLayer, LIcon} from "vue2-leaflet";
+    import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster';
 
     const trees = require('../json/trees.json').trees;
 
@@ -32,7 +35,8 @@
             LTileLayer,
             LMarker,
             LPopup,
-            LIcon
+            LIcon,
+            Vue2LeafletMarkerCluster
         },
         data() {
             return {
@@ -53,6 +57,7 @@
     }
 </script>
 
-<style scoped>
-
+<style>
+  @import "~leaflet.markercluster/dist/MarkerCluster.css";
+  @import "~leaflet.markercluster/dist/MarkerCluster.Default.css";
 </style>
