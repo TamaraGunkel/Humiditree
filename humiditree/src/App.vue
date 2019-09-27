@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    <hello></hello>
-    <main>
-    </main>
+    <sidemenu></sidemenu>
+    <tree-map></tree-map>
   </div>
 </template>
 
 <script>
-    import Hello from './components/Menu'
+    import Sidemenu from './components/Sidemenu'
+    import TreeMap from "./components/TreeMap";
 
     export default {
         name: 'app',
         components: {
-            Hello
+            Sidemenu,
+            TreeMap
         }
     }
 </script>

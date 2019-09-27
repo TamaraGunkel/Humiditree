@@ -1,10 +1,10 @@
 <template>
     <Slide>
-      <a id="home" href="#">
-        <span>Home</span>
-        <span>Home</span>
-        <span>Home</span>
-        <span>Home</span>
+      <a id="profile" href="#">
+        <span>Profil</span>
+      </a>
+      <a id="map" href="#">
+        <span>Übersichtskarte</span>
       </a>
     </Slide>
 </template>
@@ -13,7 +13,7 @@
     import {Slide} from 'vue-burger-menu'
 
     export default {
-        name: 'menu',
+        name: 'sidemenu',
         components: {
             Slide
         }
@@ -21,7 +21,7 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
   h1, h2 {
     font-weight: normal;
   }
