@@ -3,7 +3,14 @@
     <l-tile-layer :url="url" :attribution="attribution" />
     <l-marker v-for="tree in trees" :lat-lng="getLatLng(tree.lat, tree.lon)">
       <l-popup>
-        Trockenheitslvl {{tree.dryness}} <br> <a href="#">Kirschbaum</a>
+        {{tree.species}}
+        <p v-if="tree.dryness">
+          Gieß mich!
+        </p>
+        <p v-else>
+          Hab keinen Durst.
+        </p>
+
       </l-popup>
     </l-marker>
   </l-map>
