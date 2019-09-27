@@ -1,5 +1,5 @@
 <template>
-  <l-map id="treemap" :zoom="zoom"  :center="center">
+  <l-map id="treemap" :zoom="zoom" :options="{zoomControl: false}" :center="center">
     <l-tile-layer :url="url" :attribution="attribution" />
     <l-marker :lat-lng="withPopup">
       <l-popup>
@@ -35,6 +35,8 @@
 
 <style scoped>
   #treemap {
-    height: 40em;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
   }
 </style>

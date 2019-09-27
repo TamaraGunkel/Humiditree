@@ -1,5 +1,5 @@
 <template>
-    <Slide>
+    <Slide id="sidemenu">
       <a id="profile" href="#">
         <span>Profil</span>
       </a>
