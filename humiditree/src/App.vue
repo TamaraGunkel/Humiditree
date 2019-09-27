@@ -3,19 +3,17 @@
     <header>
       <sidemenu> </sidemenu>
     </header>
-    <tree-map></tree-map>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
     import Sidemenu from './components/Sidemenu'
-    import TreeMap from "./components/TreeMap";
 
     export default {
         name: 'app',
         components: {
-            Sidemenu,
-            TreeMap
+            Sidemenu
         }
     }
 </script>

@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import { Icon }  from 'leaflet'
+import router from './router'
 import 'leaflet/dist/leaflet.css'
 
 Vue.config.productionTip = false
@@ -19,6 +20,7 @@ Icon.Default.mergeOptions({
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  router,
   template: '<App/>',
   components: { App }
 })

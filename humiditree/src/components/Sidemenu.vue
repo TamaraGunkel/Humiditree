@@ -1,11 +1,11 @@
 <template>
   <Slide id="sidemenu">
-    <a id="profile" href="#">
-      <span>Profil</span>
-    </a>
-    <a id="map" href="#">
-      <span>Übersichtskarte</span>
-    </a>
+    <router-link to="/profile">
+      Profil
+    </router-link>
+    <router-link to="/">
+      Übersichtskarte
+    </router-link>
   </Slide>
 </template>
 
