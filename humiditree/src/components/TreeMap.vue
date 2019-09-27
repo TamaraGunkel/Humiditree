@@ -1,5 +1,5 @@
 <template>
-  <l-map id="treemap"   :center="center">
+  <l-map id="treemap" :zoom="zoom"  :center="center">
     <l-tile-layer :url="url" :attribution="attribution" />
     <l-marker :lat-lng="withPopup">
       <l-popup>
@@ -23,8 +23,10 @@
         },
         data() {
             return {
+                zoom: 18,
                 url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 attribution:  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                withPopup: latLng(51.950429, 7.638429),
                 center: latLng(51.950429, 7.638429)
             }
         }
@@ -33,6 +35,6 @@
 
 <style scoped>
   #treemap {
-    height: 20em;
+    height: 40em;
   }
 </style>
