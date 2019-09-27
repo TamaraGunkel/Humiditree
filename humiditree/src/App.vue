@@ -30,11 +30,13 @@
     color: #2c3e50;
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   main {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 56px;
   }
 
   header {
