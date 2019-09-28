@@ -9,14 +9,16 @@ var trees = {
             "lat": 51.950579,
             "lon": 7.637487,
             "species": "Kirschbaum",
+            "age": "< 5 Jahre",
             "last_watered": "26.09.2019",
-            "dryness": 0
+            "dryness": 1
         },
         {
             "id": 1,
             "lat": 51.950300,
             "lon": 7.637866,
             "species": "Apfelbaum",
+            "age": "< 5 Jahre",
             "last_watered": "21.09.2019",
             "dryness": 0
         },
@@ -25,6 +27,7 @@ var trees = {
             "lat": 51.949976,
             "lon": 7.638295,
             "species": "Eiche",
+            "age": "> 25 Jahre",
             "last_watered": "24.09.2019",
             "dryness": 1
         },
@@ -33,14 +36,16 @@ var trees = {
             "lat": 51.951025,
             "lon": 7.637284,
             "species": "Kastanie",
+            "age": "> 25 Jahre",
             "last_watered": "23.09.2019",
-            "dryness": 0
+            "dryness": 1
         },
         {
             "id": 4,
             "lat": 51.951408,
             "lon": 7.637998,
             "species": "Buche",
+            "age": "> 25 Jahre",
             "last_watered": "21.09.2019",
             "dryness": 1
         },
@@ -49,6 +54,7 @@ var trees = {
             "lat": 51.951022,
             "lon": 7.637907,
             "species": "Eiche",
+            "age": "< 5 Jahre",
             "last_watered": "22.09.2019",
             "dryness": 0,
         },
