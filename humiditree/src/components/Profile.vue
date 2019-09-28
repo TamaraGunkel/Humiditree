@@ -18,6 +18,13 @@
             </b-container>
           </b-row>
           <b-row>
+            <b-col id="active-field">
+              <p align='center'>Mitglied seit:</p>
+              <h3 align='center'>28.09.2019</h3>
+            </b-col>
+            <b-col id="tree-field">
+            <p align='center'> Gegossene Bäume:</p>
+              <h3 align='center'>10</h3>
             <b-col>
               <b-card title="Meine Gießhistorie">
                 <b-card-text>
@@ -41,6 +48,31 @@
             </b-col>
           </b-row>
         </b-container>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col>
+        <b-card title="Meine Gießhistorie">
+          <b-card-text>
+            <history-chart></history-chart>
+          </b-card-text>
+        </b-card>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col>
+        <b-card title="Meine Auszeichnungen">
+          <b-card-text>
+            <img src="../assets/Tree_Award2.png"/>
+          </b-card-text>
+        </b-card>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col>
+        <b-card title="Meine Baumpatenschaften">
+        <h3>Du hast leider noch keine Baumpatenschaft abgeschlossen.</h3><img src="../assets/sad.png"/>
+        </b-card>
       </b-col>
     </b-row>
   </b-container>
