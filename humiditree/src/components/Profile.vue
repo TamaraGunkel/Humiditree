@@ -1,6 +1,6 @@
 <template>
   <b-container id="app" class="p-0">
-    <b-row no-gutters>
+    <b-row no-gutters class="mb-0">
       <b-col id="header">
         <sidemenu></sidemenu>
       </b-col>
@@ -11,7 +11,7 @@
           <b-row>
             <b-col>
               <b-container class="p-0">
-                <b-row id="profile-image" class="mb-0">
+                <b-row id="profile-image" class="mb-0 pt-4">
                   <b-container>
                     <b-row>
                       <b-col>
@@ -118,5 +118,8 @@
     height: 0;
     background-color: transparent;
     z-index: 100;
+  }
+  #header .bm-burger-bars {
+    box-shadow: none;
   }
 </style>
