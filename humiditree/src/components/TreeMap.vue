@@ -23,7 +23,7 @@
                 <p class="mb-0">Alter: {{tree.age}}</p>
                 <p class="mt-0">Zuletzt gegossen: {{tree.last_watered}}</p>
                 <p v-if="!tree.dryness">
-                  Hab keinen Durst.
+                  Danke, ich bin versorgt!
                 </p>
                 <div id="example-1">
                   <b-button size="sm" class="waterBtn" v-if="tree.dryness" v-on:click=pressButton(tree.id)>Hab's gegossen</b-button>
