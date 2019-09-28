@@ -3,10 +3,8 @@
     <b-row no-gutters class="flex-grow-1">
       <b-col class="h-100 text-center">
         <div id="background">
-          <img src="../assets/LogoNeu.png"/>
-          
-          <h1 id=text>Humiditree</h1>
-
+          <img id="logo" src="../assets/LogoNeu.png"/>
+          <img id="schrift" src="../assets/LogoSchrift.png"/>
         </div>
         
         <b-form-input class="w-50 mx-auto mb-2" v-model="message" placeholder=Benutzername></b-form-input>
@@ -30,17 +28,25 @@
 #text{
   font-family: "roboto";
   margin-bottom: 20px;
+  transform:
 /*   letter-spacing: 2px;
  */}
-  img {
+  #logo {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     
   }
-
+#schrift {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    display: block;
+    margin-bottom: 25px;
+    
+  }
 /*   #background {
     background: #93fa84;
     margin-left: auto;
