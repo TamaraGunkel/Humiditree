@@ -36,7 +36,7 @@
 
   main {
     text-align: center;
-    margin-top: 56px;
+    margin-top: 20px;
   }
 
   #header {

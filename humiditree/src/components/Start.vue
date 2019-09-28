@@ -25,21 +25,21 @@
   img {
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 100%;
     display: block;
 
   }
 
   #background {
-    background: radial-gradient(rgb(199, 229, 151), rgb(196, 224, 129));
+    background: #93fa84;
     margin-left: auto;
     margin-right: auto;
     box-shadow: inset 0 3px 5px #ddd;
     box-shadow: 0 1px 3px #ddd;
-    width: 80%;
+    width: 60%;
     display: block;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 5%;
+    margin-bottom: 40px;
   }
 
   body {
@@ -50,7 +50,8 @@
 
   #loginBtn {
     color: black;
-    background-color: rgb(196, 224, 129);
-    border-color: rgb(196, 224, 129);
+    background-color: #93fa84;
+    border-color: #93fa84;
+    width: 50%;
   }
 </style>
