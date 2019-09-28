@@ -19,15 +19,14 @@
               </l-icon>
               <l-popup>
                 <h4>{{tree.species}}</h4>
-                <p>Zuletzt gegossen: {{tree.last_watered}}</p>
-                <p v-if="tree.dryness">
-                  Gieß mich!
-                </p>
-                <p v-else>
+                <img class="w-75 mx-auto d-block" v-if="tree.id == 3" src="../assets/kastanie.jpg"/>
+                <p class="mb-0">Alter: {{tree.age}}</p>
+                <p class="mt-0">Zuletzt gegossen: {{tree.last_watered}}</p>
+                <p v-if="!tree.dryness">
                   Hab keinen Durst.
                 </p>
                 <div id="example-1">
-                <button v-if="tree.dryness" v-on:click=pressButton(tree.id) >Gieß Mich</button>
+                  <b-button size="sm" class="waterBtn" v-if="tree.dryness" v-on:click=pressButton(tree.id)>Hab's gegossen</b-button>
                 </div>
               </l-popup>
             </l-marker>
@@ -80,22 +79,22 @@
                 return latLng(lat, lon);
             },
             pressButton(id) {
-              fetch(API_URL + "/water/" + id).then(response => {
-                  return response.json().then((json) => {
-                      this.trees = json.trees
-                  })
-              })
+                fetch(API_URL + "/water/" + id).then(response => {
+                    return response.json().then((json) => {
+                        this.trees = json.trees
+                    })
+                })
             },
         },
         computed: {
-          anchor1 () {
-            let size = 30;
-            return [0, size / 4];
-          },
-          anchor2 () {
-            let size = 64;
-            return [size/2 + 4, size * 0.9];
-          }
+            anchor1() {
+                let size = 30;
+                return [0, size / 4];
+            },
+            anchor2() {
+                let size = 64;
+                return [size / 2 + 4, size * 0.9];
+            }
         },
     }
 </script>
@@ -112,9 +111,20 @@
     padding: 0 16px 0 24px;
     background: #93fa84;
   }
+
+  /deep/ .leaflet-container {
+    font-family: 'Roboto', sans-serif;
+  }
+
   #headerMap .bm-burger-bars {
     box-shadow: none;
     background-color: black;
+  }
+
+  .waterBtn {
+    color: black;
+    background-color: #8fd3f4;
+    border-color: #8fd3f4;
   }
 
 </style>
