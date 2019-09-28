@@ -28,7 +28,7 @@
     import {LMap, LMarker, LPopup, LTileLayer, LIcon} from "vue2-leaflet";
     import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster';
 
-    const API_URL = "http://localhost:3000/trees";
+    const API_URL = "http://172.16.2.43:3000/trees";
 
     export default {
         name: "TreeMap",

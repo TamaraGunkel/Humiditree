@@ -58,7 +58,7 @@ app.get('/trees/water/:id', cors(), (req, res) => {
     res.json(trees)
 })
 
-var server = app.listen(3000, function () {
+var server = app.listen(3000, '172.16.2.43', function () {
     var host = server.address().address
     var port = server.address().port
 
