@@ -10,7 +10,7 @@
         <b-container fluid id="profile">
           <b-row>
             <b-col>
-              <b-container class="p-0">
+              <b-container class="p-0 shadow-sm">
                 <b-row id="profile-image" class="mb-0 pt-4">
                   <b-container>
                     <b-row>
