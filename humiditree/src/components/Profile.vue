@@ -7,7 +7,7 @@
             <b-container>
               <b-row>
                 <b-col>
-                  <img src="../assets/profile-tree.jpg"/>
+                  <img src="../assets/profile-tree.png"/>
                 </b-col>
               </b-row>
               <b-row>
