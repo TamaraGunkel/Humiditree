@@ -1,10 +1,10 @@
 <template>
   <Slide id="sidemenu">
     <router-link to="/profile">
-      <h1 id=text>Profil</h1>
+      <h1 class="text">Profil</h1>
     </router-link>
     <router-link to="/map">
-      <h1 id=text>Karte</h1>
+      <h1 class="text">Karte</h1>
     </router-link>
   </Slide>
 </template>
@@ -46,18 +46,18 @@
     background-position: center;
      background-size: cover;
 /*       position: absolute;
- */   top:0px;
-      left:0px;
+ */   top:0;
+      left:0;
       box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
    }
 
-  #text {
+  .text {
     font-size: 25px;
     color: white;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.514);
   }
 
-  #text:hover {
+  .text:hover {
     color: green;
   }
 </style>

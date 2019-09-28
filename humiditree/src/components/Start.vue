@@ -1,12 +1,18 @@
 <template>
-    <div id="box" classname>
+  <b-container class="p-0 mt-5">
+    <b-row no-gutters class="flex-grow-1">
+      <b-col class="h-100 text-center">
         <div id="background">
-            <img src="../assets/logo3.png"/>
-        </div>      
-        <input  id="textin"  placeholder="Username"> 
-        <input  id="textin"  placeholder="Passwort"> 
-        
-    </div>
+          <img src="../assets/logo3.png"/>
+        </div>
+        <b-form-input class="w-50 mx-auto mb-2" v-model="message" placeholder=Benutzername></b-form-input>
+        <b-form-input class="w-50 mx-auto mb-3" v-model="message" placeholder="Passwort"></b-form-input>
+        <router-link to="/map">
+          <b-button variant="primary">Login</b-button>
+        </router-link>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
@@ -24,9 +30,9 @@ img {
 
 }
 #box {
-    
+
     background-repeat: no-repeat;
-    background-size: contain; 
+    background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
 
@@ -57,7 +63,7 @@ body {
     width: 100%;
 }
 
-#textin{
+.textin{
     width: 50%;
     margin: 8px 0;
     display: inline-block;
