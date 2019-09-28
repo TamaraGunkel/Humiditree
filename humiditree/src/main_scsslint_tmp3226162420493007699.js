@@ -25,3 +25,17 @@ new Vue({
   components: { App }
 })
 
+import Chart from 'chart.js';
+
+new Chart(document.getElementById('history-chart'), {
+  type: 'line',
+  data: {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+    datasets: [
+      {
+        label: '2018 Sales',
+        data: [300, 700, 450, 750, 450]
+      }
+    ]
+  }
+});
