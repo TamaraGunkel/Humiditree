@@ -10,11 +10,11 @@
                 datasets: [
                     {
                         label: 'Data One',
-                        backgroundColor: '#55f89c',
+                        backgroundColor: '#84fab0',
                         data: [0, 1, 0, 2, 1, 0, 1]
                     }
                 ]
-            }, {responsive: true, maintainAspectRatio: false})
+            }, {responsive: true, maintainAspectRatio: false, legend: {display: false}})
         }
     }
 </script>

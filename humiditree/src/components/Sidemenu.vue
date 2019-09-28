@@ -1,6 +1,6 @@
 <template>
   <Slide id="sidemenu">
-    <router-link to="/profile">
+    <router-link to="/profile" class="pb-0">
       <h1 class="text">Profil</h1>
     </router-link>
     <router-link to="/map">
@@ -30,7 +30,7 @@
   }
 
   /deep/ .bm-burger-bars {
-        background-color: #fdfdfdfd;
+    background-color: #fdfdfdfd;
   }
 
   /deep/ .line-style {
@@ -40,21 +40,25 @@
 
   }
 
-   /deep/ .bm-menu {
-     background-image: url("../assets/wood.jpg");
-     background-repeat: no-repeat;
-    background-position: center;
-     background-size: cover;
-/*       position: absolute;
- */   top:0;
-      left:0;
-      box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
-   }
+  /deep/ .bm-menu {
+    background-color: #84fab0;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+    padding-top: 20px;
+  }
+
+  /deep/ .bm-item-list {
+    margin-left: 20px;
+  }
+
+  /deep/ .bm-cross {
+    background: white;
+  }
 
   .text {
     font-size: 25px;
     color: white;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.514);
   }
 
   .text:hover {

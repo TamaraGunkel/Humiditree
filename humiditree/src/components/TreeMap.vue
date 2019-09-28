@@ -18,7 +18,8 @@
                 <img src="../assets/tree-64.png"/>
               </l-icon>
               <l-popup>
-                {{tree.species}}
+                <h4>{{tree.species}}</h4>
+                <p>Zuletzt gegossen: {{tree.last_watered}}</p>
                 <p v-if="tree.dryness">
                   Gieß mich!
                 </p>
@@ -109,6 +110,11 @@
     margin: 0;
     height: 56px;
     padding: 0 16px 0 24px;
-    background: linear-gradient(180deg, rgb(3, 17, 2) 0%, rgb(30, 37, 27) 41%, rgb(30, 37, 27) 60%, rgba(3, 17, 2) 100%);
+    background: #84fab0;
   }
+  #headerMap .bm-burger-bars {
+    box-shadow: none;
+    background-color: black;
+  }
+
 </style>

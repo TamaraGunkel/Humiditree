@@ -41,8 +41,8 @@
           <b-row>
             <b-col>
               <b-card title="Meine Gießhistorie">
-                <b-card-text>
-                  <history-chart></history-chart>
+                <b-card-text id="history-chart">
+                  <history-chart :height="200"></history-chart>
                 </b-card-text>
               </b-card>
             </b-col>
@@ -115,6 +115,10 @@
     margin-bottom: 0;
   }
 
+  #history-chart {
+    height: 200px;
+  }
+
   /deep/ .card-title {
     margin-bottom: 0.75rem !important;
   }
@@ -129,5 +133,6 @@
   }
   #header .bm-burger-bars {
     box-shadow: none;
+    background-color: black;
   }
 </style>
