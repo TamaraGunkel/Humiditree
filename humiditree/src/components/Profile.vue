@@ -99,8 +99,6 @@
 
 <style>
   #header {
-    background-color: transparent;
-    height: 0;
-    z-index: 100;
+    
   }
 </style>
