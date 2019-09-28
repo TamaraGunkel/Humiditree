@@ -40,7 +40,7 @@
           </b-row>
           <b-row>
             <b-col>
-              <b-card title="Meine Gießhistorie">
+              <b-card class="shadow-sm" title="Meine Gießhistorie">
                 <b-card-text id="history-chart">
                   <history-chart :height="200"></history-chart>
                 </b-card-text>
@@ -49,7 +49,7 @@
           </b-row>
           <b-row>
             <b-col>
-              <b-card title="Meine Auszeichnungen">
+              <b-card class="shadow-sm" title="Meine Auszeichnungen">
                 <b-card-text>
                   <img class="w-25" src="../assets/Tree_Award2.png"/>
                 </b-card-text>
@@ -58,7 +58,7 @@
           </b-row>
           <b-row>
             <b-col>
-              <b-card title="Meine Baumpartenschaften">
+              <b-card class="shadow-sm" title="Meine Baumpartenschaften">
                 <p class="mb-1">Du hast leider noch keine Baumpatenschaft abgeschlossen.</p>
                 <img class="w-25" src="../assets/sad.png"/>
               </b-card>
@@ -100,10 +100,6 @@
     text-align: center;
   }
 
-#profile {
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-
-}
   #profile-image {
     background-image: linear-gradient(220deg, #93fa84 0, #8fd3f4 100%);
   }
