@@ -19,7 +19,7 @@
               </l-icon>
               <l-popup>
                 <h4>{{tree.species}}</h4>
-                <img class="w-75 mx-auto d-block" v-if="tree.id == 3" src="../assets/kastanie.jpg"/>
+                <img class="w-75 mx-auto d-block" v-if="tree.id == 0" src="../assets/kastanie.jpg"/>
                 <p class="mb-0">Alter: {{tree.age}}</p>
                 <p class="mt-0">Zuletzt gegossen: {{tree.last_watered}}</p>
                 <p v-if="!tree.dryness">

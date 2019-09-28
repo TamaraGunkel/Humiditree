@@ -8,8 +8,8 @@ var trees = {
             "id": 0,
             "lat": 51.950579,
             "lon": 7.637487,
-            "species": "Kirschbaum",
-            "age": "< 5 Jahre",
+            "species": "Linde",
+            "age": "< 10 Jahre",
             "last_watered": "26.09.2019",
             "dryness": 1
         },
@@ -35,7 +35,7 @@ var trees = {
             "id": 3,
             "lat": 51.951025,
             "lon": 7.637284,
-            "species": "Kastanie",
+            "species": "Kirschbaum",
             "age": "> 25 Jahre",
             "last_watered": "23.09.2019",
             "dryness": 1
