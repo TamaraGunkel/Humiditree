@@ -100,6 +100,10 @@
     text-align: center;
   }
 
+#profile {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+
+}
   #profile-image {
     background-image: linear-gradient(220deg, #93fa84 0, #8fd3f4 100%);
   }
