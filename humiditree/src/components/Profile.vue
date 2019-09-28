@@ -70,11 +70,13 @@
 
 <script>
     import HistoryChart from "./HistoryChart";
+    import Sidemenu from "./Sidemenu";
 
     export default {
         name: "Profile",
         components: {
-            HistoryChart
+            HistoryChart,
+            Sidemenu
         }
     }
 </script>
@@ -111,6 +113,8 @@
 
 <style>
   #header {
-
+    height: 0;
+    background-color: transparent;
+    z-index: 100;
   }
 </style>
