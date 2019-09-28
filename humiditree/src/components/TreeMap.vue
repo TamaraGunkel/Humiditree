@@ -6,12 +6,6 @@
         <l-icon :icon-anchor="staticAnchor">
           <img src="../assets/leaf-red.png"/>
         </l-icon>
-        var example1 = new Vue({
-          el: '#example-1',
-          data: {
-            counter: 0
-          }
-        })
         <l-popup>
           {{tree.species}}
           <p v-if="tree.dryness">
@@ -21,7 +15,7 @@
             Hab keinen Durst.
           </p>
           <div id="example-1">
-          <button v-on:click=pressButton() >Gieß Mich</button>        
+          <button v-if="tree.dryness" v-on:click=pressButton(tree.id) >Gieß Mich</button>
           </div>
         </l-popup>
       </l-marker>
@@ -62,18 +56,21 @@
                 return response.json().then((json) => {
                     this.trees = json.trees
                 })
-
             })
         },
         methods: {
             getLatLng(lat, lon) {
                 return latLng(lat, lon);
             },
-            pressButton() {
-              console.log("Hallo")
+            pressButton(id) {
+              fetch(API_URL + "/water/" + id).then(response => {
+                  return response.json().then((json) => {
+                      this.trees = json.trees
+                  })
+              })
           }
         }
-        
+
     }
 </script>
 
