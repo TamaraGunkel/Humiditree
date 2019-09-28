@@ -28,7 +28,7 @@
                 <b-row>
                   <b-col id="active-field" class="pt-2 pb-2">
                     <p class="text-center pb-2">Mitglied seit:</p>
-                    <h4 class="text-center">28.09.2019</h4>
+                    <h4 class="text-center">22.09.2019</h4>
                   </b-col>
                   <b-col id="tree-field" class="pt-2 pb-2">
                     <p class="text-center pb-2"> Gegossene Bäume:</p>
