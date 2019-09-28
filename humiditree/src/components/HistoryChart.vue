@@ -10,7 +10,7 @@
                 datasets: [
                     {
                         label: 'Data One',
-                        backgroundColor: '#84fab0',
+                        backgroundColor: '#93fa84',
                         data: [0, 1, 0, 2, 1, 0, 1]
                     }
                 ]

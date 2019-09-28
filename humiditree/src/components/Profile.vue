@@ -59,7 +59,8 @@
           <b-row>
             <b-col>
               <b-card title="Meine Baumpartenschaften">
-                <p class="mb-1">Du hast leider noch keine Baumpatenschaft abgeschlossen.</p><img class="w-25" src="../assets/sad.png"/>
+                <p class="mb-1">Du hast leider noch keine Baumpatenschaft abgeschlossen.</p>
+                <img class="w-25" src="../assets/sad.png"/>
               </b-card>
             </b-col>
           </b-row>
@@ -100,11 +101,11 @@
   }
 
   #profile-image {
-    background-image: linear-gradient(220deg, #84fab0 0, #8fd3f4 100%);
+    background-image: linear-gradient(220deg, #93fa84 0, #8fd3f4 100%);
   }
 
   #active-field {
-    background-color: #84fab0;
+    background-color: #93fa84;
   }
 
   #tree-field {
