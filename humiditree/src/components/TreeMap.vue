@@ -11,8 +11,11 @@
           <l-tile-layer :url="url" :attribution="attribution"/>
           <vue2-leaflet-marker-cluster>
             <l-marker v-for="tree in trees" v-bind:key="tree.id" :lat-lng="getLatLng(tree.lat, tree.lon)">
-              <l-icon :icon-anchor="staticAnchor">
-                <img src="../assets/leaf-red.png"/>
+              <l-icon v-if="tree.dryness==1" :icon-anchor="anchor1">
+                <img src="../assets/watering-can-30.png"/>
+              </l-icon>
+              <l-icon v-if="tree.dryness==0" :icon-anchor="anchor2">
+                <img src="../assets/tree-64.png"/>
               </l-icon>
               <l-popup>
                 {{tree.species}}
@@ -23,7 +26,7 @@
                   Hab keinen Durst.
                 </p>
                 <div id="example-1">
-                  <button v-if="tree.dryness" v-on:click=pressButton(tree.id) >Gieß Mich</button>
+                <button v-if="tree.dryness" v-on:click=pressButton(tree.id) >Gieß Mich</button>
                 </div>
               </l-popup>
             </l-marker>
@@ -61,7 +64,7 @@
                 withPopup: latLng(51.950429, 7.638429),
                 center: latLng(51.950429, 7.638429),
                 trees: [],
-                staticAnchor: [0, 0]
+                staticAnchor: [0, 0],
             }
         },
         mounted() {
@@ -81,9 +84,18 @@
                       this.trees = json.trees
                   })
               })
+            },
+        },
+        computed: {
+          anchor1 () {
+            let size = 30;
+            return [0, size / 4];
+          },
+          anchor2 () {
+            let size = 64;
+            return [size/2 + 4, size * 0.9];
           }
-        }
-
+        },
     }
 </script>
 
