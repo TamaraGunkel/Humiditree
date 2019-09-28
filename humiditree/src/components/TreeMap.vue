@@ -1,7 +1,7 @@
 <template>
   <b-container id="app" class="p-0">
     <b-row no-gutters>
-      <b-col id="header">
+      <b-col id="headerMap">
         <sidemenu></sidemenu>
       </b-col>
     </b-row>
@@ -41,6 +41,7 @@
     import {latLng, icon} from "leaflet";
     import {LMap, LMarker, LPopup, LTileLayer, LIcon} from "vue2-leaflet";
     import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster';
+    import Sidemenu from "./Sidemenu";
 
     const API_URL = "http://172.16.2.43:3000/trees";
 
@@ -52,7 +53,8 @@
             LMarker,
             LPopup,
             LIcon,
-            Vue2LeafletMarkerCluster
+            Vue2LeafletMarkerCluster,
+            Sidemenu
         },
         data() {
             return {
@@ -101,7 +103,12 @@
   @import "~leaflet.markercluster/dist/MarkerCluster.css";
   @import "~leaflet.markercluster/dist/MarkerCluster.Default.css";
 
-  #treemap {
 
+  #headerMap {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    margin: 0;
+    height: 56px;
+    padding: 0 16px 0 24px;
+    background: linear-gradient(180deg, rgb(3, 17, 2) 0%, rgb(30, 37, 27) 41%, rgb(30, 37, 27) 60%, rgba(3, 17, 2) 100%);
   }
 </style>
