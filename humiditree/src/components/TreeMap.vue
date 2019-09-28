@@ -17,6 +17,9 @@
           <p v-else>
             Hab keinen Durst.
           </p>
+          <div id="example-1">
+          <button v-if="tree.dryness" v-on:click=pressButton(tree.id) >Gieß Mich</button>
+          </div>
         </l-popup>
       </l-marker>
     </vue2-leaflet-marker-cluster>
@@ -28,7 +31,7 @@
     import {LMap, LMarker, LPopup, LTileLayer, LIcon} from "vue2-leaflet";
     import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster';
 
-    const API_URL = "http://localhost:3000/trees";
+    const API_URL = "http://172.16.2.43:3000/trees";
 
     export default {
         name: "TreeMap",
@@ -56,13 +59,19 @@
                 return response.json().then((json) => {
                     this.trees = json.trees
                 })
-
             })
         },
         methods: {
             getLatLng(lat, lon) {
                 return latLng(lat, lon);
-            }
+            },
+            pressButton(id) {
+              fetch(API_URL + "/water/" + id).then(response => {
+                  return response.json().then((json) => {
+                      this.trees = json.trees
+                  })
+              })
+            },
         },
         computed: {
           anchor1 () {
@@ -80,4 +89,8 @@
 <style>
   @import "~leaflet.markercluster/dist/MarkerCluster.css";
   @import "~leaflet.markercluster/dist/MarkerCluster.Default.css";
+
+  #treemap {
+    
+  }
 </style>
