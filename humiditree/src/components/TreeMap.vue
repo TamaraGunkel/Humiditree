@@ -6,6 +6,12 @@
         <l-icon :icon-anchor="staticAnchor">
           <img src="../assets/leaf-red.png"/>
         </l-icon>
+        var example1 = new Vue({
+          el: '#example-1',
+          data: {
+            counter: 0
+          }
+        })
         <l-popup>
           {{tree.species}}
           <p v-if="tree.dryness">
@@ -14,7 +20,9 @@
           <p v-else>
             Hab keinen Durst.
           </p>
-
+          <div id="example-1">
+          <button v-on:click=pressButton() >Gieß Mich</button>        
+          </div>
         </l-popup>
       </l-marker>
     </vue2-leaflet-marker-cluster>
@@ -60,8 +68,12 @@
         methods: {
             getLatLng(lat, lon) {
                 return latLng(lat, lon);
-            }
+            },
+            pressButton() {
+              console.log("Hallo")
+          }
         }
+        
     }
 </script>
 
