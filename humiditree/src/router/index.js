@@ -13,7 +13,7 @@ export default new Router({
       component: TreeMap
     },
     {
-      path: 'profile',
+      path: '/profile',
       name: 'Profil',
       component: Profile
     }
