@@ -6,7 +6,7 @@
           <img src="../assets/logo3.png"/>
         </div>
         <b-form-input class="w-50 mx-auto mb-2" v-model="message" placeholder=Benutzername></b-form-input>
-        <b-form-input class="w-50 mx-auto mb-3" v-model="message" placeholder="Passwort"></b-form-input>
+        <b-form-input type="password" class="w-50 mx-auto mb-3" v-model="message" placeholder="Passwort"></b-form-input>
         <router-link to="/map">
           <b-button id="loginBtn">Login</b-button>
         </router-link>
