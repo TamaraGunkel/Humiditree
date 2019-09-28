@@ -14,7 +14,9 @@
           <p v-else>
             Hab keinen Durst.
           </p>
-
+          <div id="example-1">
+          <button v-if="tree.dryness" v-on:click=pressButton(tree.id) >Gieß Mich</button>
+          </div>
         </l-popup>
       </l-marker>
     </vue2-leaflet-marker-cluster>
@@ -54,14 +56,21 @@
                 return response.json().then((json) => {
                     this.trees = json.trees
                 })
-
             })
         },
         methods: {
             getLatLng(lat, lon) {
                 return latLng(lat, lon);
-            }
+            },
+            pressButton(id) {
+              fetch(API_URL + "/water/" + id).then(response => {
+                  return response.json().then((json) => {
+                      this.trees = json.trees
+                  })
+              })
+          }
         }
+
     }
 </script>
 

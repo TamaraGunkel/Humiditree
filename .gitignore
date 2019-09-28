@@ -9,3 +9,6 @@ npm-debug.*
 *.orig.*
 web-build/
 web-report/
+
+backend/server_scsslint_*
+backend/node_modules/**
