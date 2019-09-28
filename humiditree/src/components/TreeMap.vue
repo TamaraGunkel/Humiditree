@@ -1,29 +1,40 @@
 <template>
-  <l-map id="treemap" :zoom="zoom" :options="{zoomControl: false}" :center="center">
-    <l-tile-layer :url="url" :attribution="attribution"/>
-    <vue2-leaflet-marker-cluster>
-      <l-marker v-for="tree in trees" v-bind:key="tree.id" :lat-lng="getLatLng(tree.lat, tree.lon)">
-        <l-icon v-if="tree.dryness==1" :icon-anchor="anchor1">
-          <img src="../assets/watering-can-30.png"/>
-        </l-icon>
-        <l-icon v-if="tree.dryness==0" :icon-anchor="anchor2">
-          <img src="../assets/tree-64.png"/>
-        </l-icon>
-        <l-popup>
-          {{tree.species}}
-          <p v-if="tree.dryness">
-            Gieß mich!
-          </p>
-          <p v-else>
-            Hab keinen Durst.
-          </p>
-          <div id="example-1">
-          <button v-if="tree.dryness" v-on:click=pressButton(tree.id) >Gieß Mich</button>
-          </div>
-        </l-popup>
-      </l-marker>
-    </vue2-leaflet-marker-cluster>
-  </l-map>
+  <b-container id="app" class="p-0">
+    <b-row no-gutters>
+      <b-col id="header">
+        <sidemenu></sidemenu>
+      </b-col>
+    </b-row>
+    <b-row no-gutters class="flex-grow-1">
+      <b-col class="h-100">
+        <l-map id="treemap" :zoom="zoom" :options="{zoomControl: false}" :center="center">
+          <l-tile-layer :url="url" :attribution="attribution"/>
+          <vue2-leaflet-marker-cluster>
+            <l-marker v-for="tree in trees" v-bind:key="tree.id" :lat-lng="getLatLng(tree.lat, tree.lon)">
+              <l-icon v-if="tree.dryness==1" :icon-anchor="anchor1">
+                <img src="../assets/watering-can-30.png"/>
+              </l-icon>
+              <l-icon v-if="tree.dryness==0" :icon-anchor="anchor2">
+                <img src="../assets/tree-64.png"/>
+              </l-icon>
+              <l-popup>
+                {{tree.species}}
+                <p v-if="tree.dryness">
+                  Gieß mich!
+                </p>
+                <p v-else>
+                  Hab keinen Durst.
+                </p>
+                <div id="example-1">
+                <button v-if="tree.dryness" v-on:click=pressButton(tree.id) >Gieß Mich</button>
+                </div>
+              </l-popup>
+            </l-marker>
+          </vue2-leaflet-marker-cluster>
+        </l-map>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
@@ -91,6 +102,6 @@
   @import "~leaflet.markercluster/dist/MarkerCluster.Default.css";
 
   #treemap {
-    
+
   }
 </style>
