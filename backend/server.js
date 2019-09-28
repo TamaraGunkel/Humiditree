@@ -12,7 +12,7 @@ app.get('/trees', cors(), (req, res) =>  {
                 "species": "Kirschbaum",
                 "dryness": 0
             },
-            {
+            /*{
                 "id": 1,
                 "lat": 51.950534,
                 "lon":  7.637547,
@@ -32,7 +32,7 @@ app.get('/trees', cors(), (req, res) =>  {
                 "lon": 7.637740,
                 "species": "Eiche",
                 "dryness": 1
-            },
+            },*/
             {
                 "id": 4,
                 "lat": 51.950300,
@@ -40,7 +40,7 @@ app.get('/trees', cors(), (req, res) =>  {
                 "species": "Kirschbaum",
                 "dryness": 0
             },
-            {
+            /*{
                 "id": 5,
                 "lat": 51.950215,
                 "lon": 7.637978,
@@ -53,7 +53,7 @@ app.get('/trees', cors(), (req, res) =>  {
                 "lon": 7.638123,
                 "species": "Kastanie",
                 "dryness": 0
-            },
+            },*/
             {
                 "id": 7,
                 "lat": 51.949976,
