@@ -19,12 +19,12 @@
           </b-row>
           <b-row>
             <b-col id="active-field">
-              <p>Mitglied seit:</p>
-              <h3>28.09.2019</h3>
+              <p align='center'>Mitglied seit:</p>
+              <h3 align='center'>28.09.2019</h3>
             </b-col>
             <b-col id="tree-field">
-              <p>Gegossene Bäume:</p>
-              <h3>10</h3>
+            <p align='center'> Gegossene Bäume:</p>
+              <h3 align='center'>10</h3>
             </b-col>
           </b-row>
         </b-container>
@@ -43,14 +43,16 @@
       <b-col>
         <b-card title="Meine Auszeichnungen">
           <b-card-text>
-            <img src="../assets/first_tree.png"/>
+            <img src="../assets/Tree_Award2.png"/>
           </b-card-text>
         </b-card>
       </b-col>
     </b-row>
     <b-row>
       <b-col>
-        <b-card title="Meine Baumpartenschaften"></b-card>
+        <b-card title="Meine Baumpatenschaften">
+        <h3>Du hast leider noch keine Baumpatenschaft abgeschlossen.</h3><img src="../assets/sad.png"/>
+        </b-card>
       </b-col>
     </b-row>
   </b-container>
