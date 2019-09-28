@@ -3,8 +3,11 @@
     <l-tile-layer :url="url" :attribution="attribution"/>
     <vue2-leaflet-marker-cluster>
       <l-marker v-for="tree in trees" v-bind:key="tree.id" :lat-lng="getLatLng(tree.lat, tree.lon)">
-        <l-icon :icon-anchor="staticAnchor">
-          <img src="../assets/leaf-red.png"/>
+        <l-icon v-if="tree.dryness==1" :icon-anchor="anchor1">
+          <img src="../assets/watering-can-30.png"/>
+        </l-icon>
+        <l-icon v-if="tree.dryness==0" :icon-anchor="anchor2">
+          <img src="../assets/tree-64.png"/>
         </l-icon>
         <l-popup>
           {{tree.species}}
@@ -14,7 +17,6 @@
           <p v-else>
             Hab keinen Durst.
           </p>
-
         </l-popup>
       </l-marker>
     </vue2-leaflet-marker-cluster>
@@ -46,7 +48,7 @@
                 withPopup: latLng(51.950429, 7.638429),
                 center: latLng(51.950429, 7.638429),
                 trees: [],
-                staticAnchor: [0, 0]
+                staticAnchor: [0, 0],
             }
         },
         mounted() {
@@ -61,7 +63,17 @@
             getLatLng(lat, lon) {
                 return latLng(lat, lon);
             }
-        }
+        },
+        computed: {
+          anchor1 () {
+            let size = 30;
+            return [0, size / 4];
+          },
+          anchor2 () {
+            let size = 64;
+            return [size/2 + 4, size * 0.9];
+          }
+        },
     }
 </script>
 
