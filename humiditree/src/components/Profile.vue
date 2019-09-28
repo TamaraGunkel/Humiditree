@@ -26,13 +26,13 @@
                   </b-container>
                 </b-row>
                 <b-row>
-                  <b-col id="active-field">
-                    <p class="text-center">Mitglied seit:</p>
-                    <h3 class="text-center">28.09.2019</h3>
+                  <b-col id="active-field" class="pt-2 pb-2">
+                    <p class="text-center pb-2">Mitglied seit:</p>
+                    <h4 class="text-center">28.09.2019</h4>
                   </b-col>
-                  <b-col id="tree-field">
-                    <p class="text-center"> Gegossene Bäume:</p>
-                    <h3 class="text-center">10</h3>
+                  <b-col id="tree-field" class="pt-2 pb-2">
+                    <p class="text-center pb-2"> Gegossene Bäume:</p>
+                    <h4 class="text-center">10</h4>
                   </b-col>
                 </b-row>
               </b-container>
@@ -51,7 +51,7 @@
             <b-col>
               <b-card title="Meine Auszeichnungen">
                 <b-card-text>
-                  <img src="../assets/Tree_Award2.png"/>
+                  <img class="w-25" src="../assets/Tree_Award2.png"/>
                 </b-card-text>
               </b-card>
             </b-col>
@@ -59,7 +59,7 @@
           <b-row>
             <b-col>
               <b-card title="Meine Baumpartenschaften">
-                <h3>Du hast leider noch keine Baumpatenschaft abgeschlossen.</h3><img src="../assets/sad.png"/>
+                <p class="mb-1">Du hast leider noch keine Baumpatenschaft abgeschlossen.</p><img class="w-25" src="../assets/sad.png"/>
               </b-card>
             </b-col>
           </b-row>
@@ -109,6 +109,14 @@
 
   #tree-field {
     background-color: #8fd3f4;
+  }
+
+  p, h4 {
+    margin-bottom: 0;
+  }
+
+  /deep/ .card-title {
+    margin-bottom: 0.75rem !important;
   }
 
 </style>
